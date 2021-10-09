@@ -7,7 +7,7 @@ Next, install all the necessary python dependencies with:
 ```
 pip install -r requirements.txt
 ```
-  In order to work successfully, the repository needs access to a valid testnet key pair with enough funds to perform transactions. You can get both the key pair and the funds at https://testnet.cspr.live/ through the account creation and faucet option respectively. Notice that any CSRP transferred in the testnet has no economical value. All the three files (secret_key.pem, public_key.pem, public_key_hex.txt) should be downloaded and saved into pair1 directory to be accessed by the program. Ideally, a second fresh key pair would be required to test the functionality, but any valid public key from the testnet would do. For organization reasons, I saved my second key pair in the pair2 directory.
+  In order to work successfully, the repository needs access to a valid testnet key pair with enough funds to perform transactions. You can get both the key pair and the funds at https://testnet.cspr.live/ through the account creation and faucet options respectively. Notice that any CSRP transferred in the testnet has no economical value. All the three files (secret_key.pem, public_key.pem, public_key_hex.txt) should be downloaded and saved into pair1 directory to be accessed by the program. Ideally, a second fresh key pair would be required to test the functionality, but any valid public key from the testnet would do. For organization reasons, I saved my second key pair in the pair2 directory.
 After all this has been taken care of, you can proceed to the next step.
 ## Generating QR Codes: creator_side.py
 You can run this piece simply by typing
@@ -37,11 +37,11 @@ Run the code by typing
 ```
 python sender_side.py
 ```
-A window will appear just like before. This window has a single input field. You should fill in it with a path to a compatible QR Code. If you followed the steps in the last section, this path will simply be "qr.png". Click on "Load Qr" and the information extracted from the QR Code will appear in the window.
+A window will appear just like before. This window has a single input field. You should fill in it with a path to a compatible QR Code. If you followed the steps in the last section, this path will simply be "qr.png". Click on "Load QR" and the information extracted from the QR Code will appear in the window.
 
 ![Loaded QR](https://raw.githubusercontent.com/FrGS-0/Casper_MiniWallet/main/screenshots/Loaded%20QR.PNG)
 
-By clicking on "Load New QR", you can load another QR Code. Clicking on "Sign" confirms that you accept the parameters and the transaction will then be performed by the program using the private key in the pair1 directory. All the technical functionality is implemented with the Casper Python SDK that can be found at https://github.com/casper-network/casper-python-sdk. The program fetches an IP address from nodes.json to be used as its gateway to the network. Notice that any connectivity issues may require you to manually update nodes.json with the information found at https://testnet.cspr.live/tools/peers. If everything worked as expected, a popup will appear to inform you of that.
+By clicking on "Load Another QR", you can load another QR Code. Clicking on "Sign" confirms that you accept the parameters and the transaction will then be performed by the program using the private key in the pair1 directory. All the technical functionality is implemented with the Casper Python SDK that can be found at https://github.com/casper-network/casper-python-sdk. The program fetches an IP address from nodes.json to be used as its gateway to the network. Notice that any connectivity issues may require you to manually update nodes.json with the information found at https://testnet.cspr.live/tools/peers. If everything worked as expected, a popup will appear to inform you of that.
 
 ![Succesful Submission](https://raw.githubusercontent.com/FrGS-0/Casper_MiniWallet/main/screenshots/Subimitted%20Transacation.PNG)
 
