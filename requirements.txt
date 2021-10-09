@@ -1,0 +1,11 @@
+kivy
+qrcode
+opencv-python
+cryptography
+ecdsa
+jsonrpcclient
+requests
+pytest
+sseclient-py
+tox
+pycspr
