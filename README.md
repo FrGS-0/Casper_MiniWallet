@@ -32,3 +32,19 @@ Now, click on "Get QR" and get your QR Code.
 ![Getting your QR Code](https://raw.githubusercontent.com/FrGS-0/Casper_MiniWallet/main/screenshots/Created%20QR%20Code%20(Window%20Only).PNG)
 
 You can save the generated QR Code as a file named qr.png in the same directory as the creator_side.py script to be used in the next section by clicking on "Save QR", or you can create a new QR Code by going with "New QR". Once you are done with it, you can exit the program by either closing the Kivy window or using Ctrl+C in the console.
+## Making transactions: sender_side.py
+Run the code by typing
+```
+python sender_side.py
+```
+A window will appear just like before. This window has a single input field. You should fill in it with a path to a compatible QR Code. If you followed the steps in the last section, this path will simply be "qr.png". Click on "Load Qr" and the information extracted from the QR Code will appear in the window.
+
+![Loaded QR](https://raw.githubusercontent.com/FrGS-0/Casper_MiniWallet/main/screenshots/Loaded%20QR.PNG)
+
+By clicking on "Load New QR", you can load another QR Code. Clicking on "Sign" confirms that you accept the parameters and the transaction will then be performed by the program using the private key in the pair1 directory. All the technical functionality is implemented with the Casper Python SDK that can be found at https://github.com/casper-network/casper-python-sdk. The program fetches an IP address from nodes.json to be used as its gateway to the network. Notice that any connectivity issues may require you to manually update nodes.json with the information found at https://testnet.cspr.live/tools/peers. If everything worked as expected, a popup will appear to inform you of that.
+
+![Succesful Submission](https://raw.githubusercontent.com/FrGS-0/Casper_MiniWallet/main/screenshots/Subimitted%20Transacation.PNG)
+
+Wait some time for your transaction to propagate in the network, then visit https://testnet.cspr.live again and input the sender's and receiver's public keys. Assuming that no errors occurred, you will be able to see the changes in the balances of the two accounts and a log of the transaction near the bottom.
+
+![Proof of Success](https://raw.githubusercontent.com/FrGS-0/Casper_MiniWallet/main/screenshots/Proof%20of%20Success.PNG)
