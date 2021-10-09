@@ -48,3 +48,8 @@ By clicking on "Load Another QR", you can load another QR Code. Clicking on "Sig
 Wait some time for your transaction to propagate in the network, then visit https://testnet.cspr.live again and input the sender's and receiver's public keys. Assuming that no errors occurred, you will be able to see the changes in the balances of the two accounts and a log of the transaction near the bottom.
 
 ![Proof of Success](https://raw.githubusercontent.com/FrGS-0/Casper_MiniWallet/main/screenshots/Proof%20of%20Success.PNG)
+
+## Conclusion and possible improvements
+As stated in the introduction, this project is still too rudimentary and poor in features to be used as a full-fledged wallet. First of all, I consider the appearance to be very ugly by modern standards. A way to solve it would be designing original UI elements to be used for buttons and text boxes. As far as my research went, Kivy didn't look like it had that many options to stylize these elements (At least simply by setting a few parameters like color and background), and the result ended up looking a little crude. During development, I tried setting the background color to several tones of dark blue (Like on the official website) and what I got was either plain white or the basic blue that I left in the final version.
+
+In terms of features, adding the option to create a key pair locally, and check on an account's balance, as well as support to other types of transactions would be a huge improvement. In general, however, I believe the project met the expectations of what I set up to do with my time and resources constraints, so I'm satisfied with the results.
